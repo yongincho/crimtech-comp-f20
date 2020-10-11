@@ -8,13 +8,25 @@
     <script>
         console.log("You found me!");
         function square(i) {
-            // Your code here!
-            return 0
+            if (typeof i === "number") {
+                return i*i;
+            }
+            else {
+                return -1;
+            }
         }
-
         function numberString(i) {
-            // Your code here!
-            return ""
+            if (parseInt(i) == i && i > 0) {
+                var s = "";
+                for (var n = 0; n <= i; n++) {
+                    s += n.toString();
+                }  
+                console.log(s);
+            }
+            else {
+                console.log("Please enter a positive whole number");
+            }
+            return;
         }
     </script>
 </body>
